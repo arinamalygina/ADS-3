@@ -3,7 +3,6 @@
 int cbinsearch(int *arr, int size, int value) {
   //  поместить сюда реализацию алгоритма
   return 0; // если ничего не найдено
-  int cbinsearch(int* arr, int size, int value) {
   int count = 0;
   int left = 0;
   int right = size - 1;
@@ -19,12 +18,12 @@ int cbinsearch(int *arr, int size, int value) {
         count++;
         i--;
       }
-      int j = mid + 1;
-      while (j < size && arr[j] == value) {
+      i = mid + 1;
+      while (i < size && arr[i] == value) {
         count++;
-        j++;
+        i++;
       }
-      break;
+      return count;
     } else if (arr[mid] < value) {
       left = mid + 1;
     } else {
@@ -34,4 +33,3 @@ int cbinsearch(int *arr, int size, int value) {
 
   return count;
 }
-
